@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f7f4">
+  <meta name="theme-color" content="#f3f3ec">
   <meta name="description" content="Andrey Romanov — Unity Developer, C#, mobile games and WebGL.">
   <title>Andrey Romanov — Unity Developer</title>
 
   <style>
     :root {
-      --bg: #f7f7f4;
+      --bg: #f3f3ec;
       --surface: #ffffff;
       --text: #20221f;
       --muted: #686b64;
@@ -25,7 +25,10 @@
 
     body {
       margin: 0;
-      background: var(--bg);
+      background:
+        radial-gradient(ellipse at 8% 0%, #e1ebd1 0, transparent 34rem),
+        radial-gradient(ellipse at 96% 14%, #ebe6f4 0, transparent 30rem),
+        var(--bg);
       color: var(--text);
       font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
     }
@@ -64,11 +67,13 @@
     }
 
     .nav-links a { text-decoration: none; }
-    .nav-links a:hover, .contact a:hover { color: var(--accent); }
 
-    .hero {
-      padding: 72px 0 50px;
+    .nav-links a:hover,
+    .contact a:hover {
+      color: var(--accent);
     }
+
+    .hero { padding: 72px 0 50px; }
 
     .eyebrow {
       margin: 0 0 12px;
@@ -187,6 +192,28 @@
       color: var(--accent);
     }
 
+    .yandex-cover {
+      display: flex;
+      align-items: end;
+      padding: 22px;
+      color: #20221f;
+      font-size: 18px;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .shooting-cover {
+      background:
+        radial-gradient(circle at 78% 28%, #ffffffa0 0 8%, transparent 8.5%),
+        linear-gradient(135deg, #dbe7d0, #a9bc91 55%, #798b66);
+    }
+
+    .anime-cover {
+      background:
+        radial-gradient(circle at 78% 28%, #ffffffa0 0 8%, transparent 8.5%),
+        linear-gradient(135deg, #eee0ee, #d8b9d8 55%, #a78bb7);
+    }
+
     .game-content { padding: 20px; }
 
     .tags {
@@ -226,6 +253,7 @@
       font-weight: 750;
       letter-spacing: .13em;
       text-transform: uppercase;
+      text-decoration: none;
     }
 
     .code-grid {
@@ -300,7 +328,12 @@
 
     @media (max-width: 700px) {
       .games, .code-grid { grid-template-columns: 1fr; }
-      .section-heading { align-items: flex-start; flex-direction: column; }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
       .section-note { max-width: none; }
     }
 
@@ -349,7 +382,7 @@
             <p class="section-kicker">Selected work</p>
             <h2>Games</h2>
           </div>
-          <p class="section-note">Gameplay videos and a playable PC project.</p>
+          <p class="section-note">Gameplay videos and playable projects.</p>
         </div>
 
         <div class="games">
@@ -380,12 +413,48 @@
           </article>
 
           <article class="card">
-            <a class="slender-art" href="https://drivebygoblin.itch.io/slender-meant-the-eight-packages" target="_blank" rel="noopener noreferrer">Slender</a>
+            <a class="game-image yandex-cover shooting-cover"
+               href="https://yandex.ru/games/app/simuliator-strelby-iz-oruzhiia-394139?lang=ru"
+               target="_blank" rel="noopener noreferrer">
+              Симулятор стрельбы
+            </a>
+            <div class="game-content">
+              <div class="tags"><span class="tag">Yandex Games</span><span class="tag">Browser game</span></div>
+              <h3>Симулятор стрельбы из оружия</h3>
+              <p>Браузерная игра, опубликованная на Яндекс Играх.</p>
+              <a class="text-link"
+                 href="https://yandex.ru/games/app/simuliator-strelby-iz-oruzhiia-394139?lang=ru"
+                 target="_blank" rel="noopener noreferrer">Open on Yandex Games ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="game-image yandex-cover anime-cover"
+               href="https://yandex.ru/games/app/tainy-anime-devushek-560783?lang=ru"
+               target="_blank" rel="noopener noreferrer">
+              Anime Girls’ Secrets
+            </a>
+            <div class="game-content">
+              <div class="tags"><span class="tag">Yandex Games</span><span class="tag">Browser game</span></div>
+              <h3>Тайны аниме-девушек</h3>
+              <p>Игра, опубликованная на Яндекс Играх.</p>
+              <a class="text-link"
+                 href="https://yandex.ru/games/app/tainy-anime-devushek-560783?lang=ru"
+                 target="_blank" rel="noopener noreferrer">Open on Yandex Games ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="slender-art"
+               href="https://drivebygoblin.itch.io/slender-meant-the-eight-packages"
+               target="_blank" rel="noopener noreferrer">Slender</a>
             <div class="game-content">
               <div class="tags"><span class="tag">3D horror</span><span class="tag">PC</span></div>
               <h3>Slender: Meant the Eight Packages</h3>
               <p>A first-person horror game available to play on itch.io.</p>
-              <a class="text-link" href="https://drivebygoblin.itch.io/slender-meant-the-eight-packages" target="_blank" rel="noopener noreferrer">View game on itch.io ↗</a>
+              <a class="text-link"
+                 href="https://drivebygoblin.itch.io/slender-meant-the-eight-packages"
+                 target="_blank" rel="noopener noreferrer">View game on itch.io ↗</a>
             </div>
           </article>
         </div>
